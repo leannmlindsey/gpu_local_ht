@@ -1,0 +1,1799 @@
+---
+MainSourceFile:  MainSrcFiles_placehold
+Replacements:
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/helper.cpp'
+    Offset:          0
+    Length:          0
+    ReplacementText: "#include <sycl/sycl.hpp>\n#include <dpct/dpct.hpp>\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/helper.cpp'
+    Offset:          1490
+    Length:          17
+    ReplacementText: 'std::max(lsize, rsize)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          0
+    Length:          0
+    ReplacementText: "#include <sycl/sycl.hpp>\n#include <dpct/dpct.hpp>\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          24
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          57
+    Length:          0
+    ReplacementText: ", const sycl::nd_item<3> &item_ct1,\n               const sycl::stream &stream_ct1"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          78
+    Length:          11
+    ReplacementText: 'item_ct1.get_local_id(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          226
+    Length:          0
+    ReplacementText: "    /*\n    DPCT1023:4: The SYCL sub-group does not support mask options for dpct::select_from_sub_group. You can specify \"--use-experimental-features=masked-sub-group-operation\" to use the experimental helper function to migrate __shfl_sync.\n    */\n    /*\n    DPCT1096:14: The right-most dimension of the work-group used in the SYCL kernel that calls this function may be less than \"32\". The function \"dpct::select_from_sub_group\" may return an unexpected result on the CPU device. Modify the size of the work-group to ensure that the value of the right-most dimension is a multiple of \"32\".\n    */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          238
+    Length:          33
+    ReplacementText: 'dpct::select_from_sub_group(item_ct1.get_sub_group(), value, 0)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          376
+    Length:          0
+    ReplacementText: "        /*\n        DPCT1015:5: Output needs adjustment.\n        */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          384
+    Length:          75
+    ReplacementText: 'stream_ct1 << "Thread %d failed. with val:%d, arg:%d \n"'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          482
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          522
+    Length:          0
+    ReplacementText: ', const sycl::stream &stream_ct1'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          597
+    Length:          0
+    ReplacementText: "        /*\n        DPCT1015:6: Output needs adjustment.\n        */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          605
+    Length:          29
+    ReplacementText: 'stream_ct1 << "%c"'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          646
+    Length:          12
+    ReplacementText: 'stream_ct1 << "\n"'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          671
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          862
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          1296
+    Length:          10
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          3362
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          4028
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          4708
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          4791
+    Length:          0
+    ReplacementText: ",\n               const sycl::stream &stream_ct1"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          5404
+    Length:          49
+    ReplacementText: 'stream_ct1 << "*****end reached, hashtable full*****\n"'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          5484
+    Length:          49
+    ReplacementText: 'stream_ct1 << "*****end reached, hashtable full*****\n"'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          5547
+    Length:          49
+    ReplacementText: 'stream_ct1 << "*****end reached, hashtable full*****\n"'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          5704
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          5797
+    Length:          0
+    ReplacementText: ",\n                    const sycl::stream &stream_ct1"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          6410
+    Length:          49
+    ReplacementText: 'stream_ct1 << "*****end reached, hashtable full*****\n"'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          6490
+    Length:          49
+    ReplacementText: 'stream_ct1 << "*****end reached, hashtable full*****\n"'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          6553
+    Length:          49
+    ReplacementText: 'stream_ct1 << "*****end reached, hashtable full*****\n"'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          6685
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          6775
+    Length:          0
+    ReplacementText: ",\n                      const sycl::nd_item<3> &item_ct1,\n                      const sycl::stream &stream_ct1"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          6914
+    Length:          66
+    ReplacementText: 'dpct::atomic_compare_exchange_strong<sycl::access::address_space::generic_space>(&thread_ht[hash_val].key.length, EMPTY, kmer_key.length)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          6982
+    Length:          0
+    ReplacementText: "        /*\n        DPCT1086:7: __activemask() is migrated to 0xffffffff. You may need to adjust the code.\n        */\n        /*\n        DPCT1007:13: Migration of __match_any_sync is not supported.\n        */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          7018
+    Length:          14
+    ReplacementText: '0xffffffff'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          7353
+    Length:          16
+    ReplacementText: 'sycl::group_barrier(item_ct1.get_sub_group())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          7843
+    Length:          49
+    ReplacementText: 'stream_ct1 << "*****end reached, hashtable full*****\n"'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          7923
+    Length:          49
+    ReplacementText: 'stream_ct1 << "*****end reached, hashtable full*****\n"'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          7986
+    Length:          49
+    ReplacementText: 'stream_ct1 << "*****end reached, hashtable full*****\n"'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          8056
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          8265
+    Length:          0
+    ReplacementText: ",\n               const sycl::stream &stream_ct1"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          8541
+    Length:          0
+    ReplacementText: ', stream_ct1'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          9146
+    Length:          0
+    ReplacementText: ', stream_ct1'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          11065
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          11350
+    Length:          0
+    ReplacementText: ",\nconst sycl::nd_item<3> &item_ct1, const sycl::stream &stream_ct1"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          11377
+    Length:          11
+    ReplacementText: 'item_ct1.get_local_id(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          14986
+    Length:          0
+    ReplacementText: ', item_ct1, stream_ct1'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          15244
+    Length:          54
+    ReplacementText: 'stream_ct1 << "*********ASSERTION FAILURE IN COUNT_MERS****"'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          15723
+    Length:          12
+    ReplacementText: 'sycl::group_barrier(item_ct1.get_sub_group())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          15871
+    Length:          12
+    ReplacementText: 'sycl::group_barrier(item_ct1.get_sub_group())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          16036
+    Length:          0
+    ReplacementText: ', stream_ct1'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          16059
+    Length:          12
+    ReplacementText: 'sycl::group_barrier(item_ct1.get_sub_group())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          16664
+    Length:          12
+    ReplacementText: 'sycl::group_barrier(item_ct1.get_sub_group())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          16732
+    Length:          11
+    ReplacementText: "/*\nDPCT1110:8: The total declared local variable size in device function iterative_walks_kernel exceeds 128 bytes and may cause high register pressure. Consult with your hardware vendor to find the total register size available and adjust the code, or use smaller sub-group size to avoid high register pressure.\n*/\nSYCL_EXTERNAL "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          17271
+    Length:          0
+    ReplacementText: ",\nconst sycl::nd_item<3> &item_ct1, const sycl::stream &stream_ct1"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          17300
+    Length:          11
+    ReplacementText: 'item_ct1.get_local_id(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          17314
+    Length:          10
+    ReplacementText: 'item_ct1.get_group(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          17327
+    Length:          10
+    ReplacementText: 'item_ct1.get_local_range(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          17409
+    Length:          11
+    ReplacementText: 'item_ct1.get_local_id(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          19860
+    Length:          32
+    ReplacementText: 'sycl::min(max_mer_len, loc_ctg.length)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          20949
+    Length:          0
+    ReplacementText: ', item_ct1, stream_ct1'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          22045
+    Length:          0
+    ReplacementText: ', stream_ct1'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          23733
+    Length:          21
+    ReplacementText: 'sycl::group_barrier(item_ct1.get_sub_group())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          23756
+    Length:          0
+    ReplacementText: "        /*\n        DPCT1086:9: __activemask() is migrated to 0xffffffff. You may need to adjust the code.\n        */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          23780
+    Length:          14
+    ReplacementText: '0xffffffff'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Offset:          23971
+    Length:          0
+    ReplacementText: ', item_ct1, stream_ct1'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          0
+    Length:          0
+    ReplacementText: "#include <sycl/sycl.hpp>\n#include <dpct/dpct.hpp>\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          224
+    Length:          0
+    ReplacementText: "\n#include <cmath>\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          302
+    Length:          25
+    ReplacementText: 'gpus = dpct::dev_mgr::instance().device_count()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          371
+    Length:          0
+    ReplacementText: "        /*\n        DPCT1093:11: The \"id\" device may be not the one intended for use. Adjust the selected device if needed.\n        */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          379
+    Length:          13
+    ReplacementText: 'dpct::select_device'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          398
+    Length:          0
+    ReplacementText: "        /*\n        DPCT1106:12: 'cudaMemGetInfo' was migrated with the Intel extensions for device information which may not be supported by all compilers or runtimes. You may need to adjust the code.\n        */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          406
+    Length:          37
+    ReplacementText: 'dpct::get_current_device().get_memory_info(free_mem, total_mem)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          14849
+    Length:          60
+    ReplacementText: 'DPCT_CHECK_ERROR(prefix_ht_size_d = sycl::malloc_device<uint32_t>(slice_size, dpct::get_default_queue()))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          14927
+    Length:          49
+    ReplacementText: 'DPCT_CHECK_ERROR(cid_d = sycl::malloc_device<uint32_t>(slice_size, dpct::get_default_queue()))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          14994
+    Length:          61
+    ReplacementText: 'DPCT_CHECK_ERROR(ctg_seq_offsets_d = sycl::malloc_device<uint32_t>(slice_size, dpct::get_default_queue()))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          15073
+    Length:          63
+    ReplacementText: 'DPCT_CHECK_ERROR(reads_l_offset_d = sycl::malloc_device<uint32_t>(max_l_rds_its, dpct::get_default_queue()))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          15182
+    Length:          63
+    ReplacementText: 'DPCT_CHECK_ERROR(reads_r_offset_d = sycl::malloc_device<uint32_t>(max_r_rds_its, dpct::get_default_queue()))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          15292
+    Length:          62
+    ReplacementText: 'DPCT_CHECK_ERROR(rds_l_cnt_offset_d = sycl::malloc_device<uint32_t>(slice_size, dpct::get_default_queue()))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          15372
+    Length:          62
+    ReplacementText: 'DPCT_CHECK_ERROR(rds_r_cnt_offset_d = sycl::malloc_device<uint32_t>(slice_size, dpct::get_default_queue()))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          15452
+    Length:          54
+    ReplacementText: 'DPCT_CHECK_ERROR(ctg_seqs_d = sycl::malloc_device<char>(max_ctg_len_it, dpct::get_default_queue()))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          15553
+    Length:          71
+    ReplacementText: 'DPCT_CHECK_ERROR(reads_left_d = (char *)sycl::malloc_device(sizeof(char) * max_read_size * max_l_rds_its, dpct::get_default_queue()))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          15653
+    Length:          72
+    ReplacementText: 'DPCT_CHECK_ERROR(reads_right_d = (char *)sycl::malloc_device(sizeof(char) * max_read_size * max_r_rds_its, dpct::get_default_queue()))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          15752
+    Length:          49
+    ReplacementText: 'DPCT_CHECK_ERROR(depth_d = sycl::malloc_device<double>(slice_size, dpct::get_default_queue()))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          15819
+    Length:          71
+    ReplacementText: 'DPCT_CHECK_ERROR(quals_right_d = (char *)sycl::malloc_device(sizeof(char) *max_read_size * max_r_rds_its, dpct::get_default_queue()))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          15922
+    Length:          71
+    ReplacementText: 'DPCT_CHECK_ERROR(quals_left_d = (char *)sycl::malloc_device(sizeof(char) * max_read_size * max_l_rds_its, dpct::get_default_queue()))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          16034
+    Length:          46
+    ReplacementText: 'DPCT_CHECK_ERROR(term_counts_d = sycl::malloc_device<uint32_t>(3, dpct::get_default_queue()))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          16446
+    Length:          40
+    ReplacementText: 'DPCT_CHECK_ERROR(d_ht = sycl::malloc_device<loc_ht>(max_ht, dpct::get_default_queue()))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          16538
+    Length:          68
+    ReplacementText: 'DPCT_CHECK_ERROR(longest_walks_d = (char *)sycl::malloc_device(sizeof(char)*slice_size * max_walk_len, dpct::get_default_queue()))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          16624
+    Length:          86
+    ReplacementText: 'DPCT_CHECK_ERROR(mer_walk_temp_d = (char *)sycl::malloc_device((max_mer_len + max_walk_len) * sizeof(char) * slice_size, dpct::get_default_queue()))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          16728
+    Length:          71
+    ReplacementText: 'DPCT_CHECK_ERROR(d_ht_bool = (loc_ht_bool *)sycl::malloc_device(sizeof(loc_ht_bool) * slice_size * max_walk_len, dpct::get_default_queue()))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          16817
+    Length:          61
+    ReplacementText: 'DPCT_CHECK_ERROR(final_walk_lens_d = sycl::malloc_device<uint32_t>(slice_size, dpct::get_default_queue()))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          20835
+    Length:          10
+    ReplacementText: 'DPCT_CHECK_ERROR(dpct::get_default_queue().memcpy'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          20915
+    Length:          24
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          20940
+    Length:          0
+    ReplacementText: '.wait())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          20962
+    Length:          10
+    ReplacementText: 'DPCT_CHECK_ERROR(dpct::get_default_queue().memcpy'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          21020
+    Length:          24
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          21045
+    Length:          0
+    ReplacementText: '.wait())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          21067
+    Length:          10
+    ReplacementText: 'DPCT_CHECK_ERROR(dpct::get_default_queue().memcpy'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          21149
+    Length:          24
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          21174
+    Length:          0
+    ReplacementText: '.wait())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          21196
+    Length:          10
+    ReplacementText: 'DPCT_CHECK_ERROR(dpct::get_default_queue().memcpy'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          21287
+    Length:          24
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          21312
+    Length:          0
+    ReplacementText: '.wait())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          21334
+    Length:          10
+    ReplacementText: 'DPCT_CHECK_ERROR(dpct::get_default_queue().memcpy'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          21425
+    Length:          24
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          21450
+    Length:          0
+    ReplacementText: '.wait())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          21472
+    Length:          10
+    ReplacementText: 'DPCT_CHECK_ERROR(dpct::get_default_queue().memcpy'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          21556
+    Length:          24
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          21581
+    Length:          0
+    ReplacementText: '.wait())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          21603
+    Length:          10
+    ReplacementText: 'DPCT_CHECK_ERROR(dpct::get_default_queue().memcpy'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          21687
+    Length:          24
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          21712
+    Length:          0
+    ReplacementText: '.wait())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          21734
+    Length:          10
+    ReplacementText: 'DPCT_CHECK_ERROR(dpct::get_default_queue().memcpy'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          21805
+    Length:          24
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          21830
+    Length:          0
+    ReplacementText: '.wait())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          21852
+    Length:          10
+    ReplacementText: 'DPCT_CHECK_ERROR(dpct::get_default_queue().memcpy'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          21930
+    Length:          24
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          21955
+    Length:          0
+    ReplacementText: '.wait())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          21977
+    Length:          10
+    ReplacementText: 'DPCT_CHECK_ERROR(dpct::get_default_queue().memcpy'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          22057
+    Length:          24
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          22082
+    Length:          0
+    ReplacementText: '.wait())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          22104
+    Length:          10
+    ReplacementText: 'DPCT_CHECK_ERROR(dpct::get_default_queue().memcpy'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          22164
+    Length:          24
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          22189
+    Length:          0
+    ReplacementText: '.wait())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          22211
+    Length:          10
+    ReplacementText: 'DPCT_CHECK_ERROR(dpct::get_default_queue().memcpy'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          22291
+    Length:          24
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          22316
+    Length:          0
+    ReplacementText: '.wait())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          22338
+    Length:          10
+    ReplacementText: 'DPCT_CHECK_ERROR(dpct::get_default_queue().memcpy'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          22416
+    Length:          24
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          22441
+    Length:          0
+    ReplacementText: '.wait())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          22463
+    Length:          10
+    ReplacementText: 'DPCT_CHECK_ERROR(dpct::get_default_queue().memcpy'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          22528
+    Length:          24
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          22553
+    Length:          0
+    ReplacementText: '.wait())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          23091
+    Length:          0
+    ReplacementText: "        /*\n        DPCT1049:2: The work-group size passed to the SYCL kernel may exceed the limit. To get the device limit, query info::device::max_work_group_size. Adjust the work-group size if needed.\n        */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          23099
+    Length:          386
+    ReplacementText: "{\n          dpct::has_capability_or_fail(dpct::get_default_queue().get_device(), {sycl::aspect::fp64});\n          dpct::get_default_queue().submit(\n            [&](sycl::handler &cgh) {\n              sycl::stream stream_ct1(64 * 1024, 80, cgh);\n\n              cgh.parallel_for(\n                sycl::nd_range<3>(sycl::range<3>(1, 1, blocks) * sycl::range<3>(1, 1, thread_per_blk), sycl::range<3>(1, 1, thread_per_blk)), \n                [=](sycl::nd_item<3> item_ct1) [[intel::reqd_sub_group_size(32)]] {\n                  iterative_walks_kernel(cid_d, ctg_seq_offsets_d, ctg_seqs_d, reads_right_d, quals_right_d, reads_r_offset_d, rds_r_cnt_offset_d, depth_d, d_ht, prefix_ht_size_d, d_ht_bool, mer_len, max_mer_len, term_counts_d, num_walks, max_walk_len, sum_ext, max_read_size, max_read_count, qual_offset, longest_walks_d, mer_walk_temp_d, final_walk_lens_d, vec_size, item_ct1, stream_ct1);\n                });\n            });\n        }"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: true
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          23485
+    Length:          1
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          23507
+    Length:          23
+    ReplacementText: 'DPCT_CHECK_ERROR(dpct::get_current_device().queues_wait_and_throw())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          24814
+    Length:          10
+    ReplacementText: 'DPCT_CHECK_ERROR(dpct::get_default_queue().memcpy'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          24941
+    Length:          24
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          24966
+    Length:          0
+    ReplacementText: '.wait())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          24988
+    Length:          10
+    ReplacementText: 'DPCT_CHECK_ERROR(dpct::get_default_queue().memcpy'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          25092
+    Length:          24
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          25117
+    Length:          0
+    ReplacementText: '.wait())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          25216
+    Length:          10
+    ReplacementText: 'DPCT_CHECK_ERROR(dpct::get_default_queue().memcpy'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          25291
+    Length:          24
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          25316
+    Length:          0
+    ReplacementText: '.wait())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          25399
+    Length:          0
+    ReplacementText: "        /*\n        DPCT1049:3: The work-group size passed to the SYCL kernel may exceed the limit. To get the device limit, query info::device::max_work_group_size. Adjust the work-group size if needed.\n        */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          25407
+    Length:          384
+    ReplacementText: "{\n          dpct::has_capability_or_fail(dpct::get_default_queue().get_device(), {sycl::aspect::fp64});\n          dpct::get_default_queue().submit(\n            [&](sycl::handler &cgh) {\n              sycl::stream stream_ct1(64 * 1024, 80, cgh);\n\n              cgh.parallel_for(\n                sycl::nd_range<3>(sycl::range<3>(1, 1, blocks) * sycl::range<3>(1, 1, thread_per_blk), sycl::range<3>(1, 1, thread_per_blk)), \n                [=](sycl::nd_item<3> item_ct1) [[intel::reqd_sub_group_size(32)]] {\n                  iterative_walks_kernel(cid_d, ctg_seq_offsets_d, ctg_seqs_d, reads_left_d, quals_left_d, reads_l_offset_d, rds_l_cnt_offset_d, depth_d, d_ht, prefix_ht_size_d, d_ht_bool, mer_len, max_mer_len, term_counts_d, num_walks, max_walk_len, sum_ext, max_read_size, max_read_count, qual_offset, longest_walks_d, mer_walk_temp_d, final_walk_lens_d, vec_size, item_ct1, stream_ct1);\n                });\n            });\n        }"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: true
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          25791
+    Length:          1
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          25930
+    Length:          10
+    ReplacementText: 'DPCT_CHECK_ERROR(dpct::get_default_queue().memcpy'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          26058
+    Length:          24
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          26083
+    Length:          0
+    ReplacementText: '.wait())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          26129
+    Length:          10
+    ReplacementText: 'DPCT_CHECK_ERROR(dpct::get_default_queue().memcpy'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          26234
+    Length:          24
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          26259
+    Length:          0
+    ReplacementText: '.wait())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          27755
+    Length:          23
+    ReplacementText: 'DPCT_CHECK_ERROR(sycl::free(term_counts_d, dpct::get_default_queue())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          27778
+    Length:          0
+    ReplacementText: ')'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          27796
+    Length:          15
+    ReplacementText: 'DPCT_CHECK_ERROR(sycl::free(cid_d, dpct::get_default_queue())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          27811
+    Length:          0
+    ReplacementText: ')'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          27829
+    Length:          27
+    ReplacementText: 'DPCT_CHECK_ERROR(sycl::free(ctg_seq_offsets_d, dpct::get_default_queue())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          27856
+    Length:          0
+    ReplacementText: ')'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          27874
+    Length:          26
+    ReplacementText: 'DPCT_CHECK_ERROR(sycl::free(reads_l_offset_d, dpct::get_default_queue())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          27900
+    Length:          0
+    ReplacementText: ')'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          27918
+    Length:          26
+    ReplacementText: 'DPCT_CHECK_ERROR(sycl::free(reads_r_offset_d, dpct::get_default_queue())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          27944
+    Length:          0
+    ReplacementText: ')'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          27962
+    Length:          28
+    ReplacementText: 'DPCT_CHECK_ERROR(sycl::free(rds_l_cnt_offset_d, dpct::get_default_queue())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          27990
+    Length:          0
+    ReplacementText: ')'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          28008
+    Length:          28
+    ReplacementText: 'DPCT_CHECK_ERROR(sycl::free(rds_r_cnt_offset_d, dpct::get_default_queue())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          28036
+    Length:          0
+    ReplacementText: ')'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          28054
+    Length:          20
+    ReplacementText: 'DPCT_CHECK_ERROR(sycl::free(ctg_seqs_d, dpct::get_default_queue())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          28074
+    Length:          0
+    ReplacementText: ')'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          28092
+    Length:          22
+    ReplacementText: 'DPCT_CHECK_ERROR(sycl::free(reads_left_d, dpct::get_default_queue())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          28114
+    Length:          0
+    ReplacementText: ')'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          28132
+    Length:          23
+    ReplacementText: 'DPCT_CHECK_ERROR(sycl::free(reads_right_d, dpct::get_default_queue())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          28155
+    Length:          0
+    ReplacementText: ')'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          28173
+    Length:          17
+    ReplacementText: 'DPCT_CHECK_ERROR(sycl::free(depth_d, dpct::get_default_queue())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          28190
+    Length:          0
+    ReplacementText: ')'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          28208
+    Length:          23
+    ReplacementText: 'DPCT_CHECK_ERROR(sycl::free(quals_right_d, dpct::get_default_queue())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          28231
+    Length:          0
+    ReplacementText: ')'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          28249
+    Length:          22
+    ReplacementText: 'DPCT_CHECK_ERROR(sycl::free(quals_left_d, dpct::get_default_queue())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          28271
+    Length:          0
+    ReplacementText: ')'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          28289
+    Length:          14
+    ReplacementText: 'DPCT_CHECK_ERROR(sycl::free(d_ht, dpct::get_default_queue())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          28303
+    Length:          0
+    ReplacementText: ')'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          28322
+    Length:          25
+    ReplacementText: 'DPCT_CHECK_ERROR(sycl::free(longest_walks_d, dpct::get_default_queue())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          28347
+    Length:          0
+    ReplacementText: ')'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          28365
+    Length:          25
+    ReplacementText: 'DPCT_CHECK_ERROR(sycl::free(mer_walk_temp_d, dpct::get_default_queue())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          28390
+    Length:          0
+    ReplacementText: ')'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          28408
+    Length:          19
+    ReplacementText: 'DPCT_CHECK_ERROR(sycl::free(d_ht_bool, dpct::get_default_queue())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          28427
+    Length:          0
+    ReplacementText: ')'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          28445
+    Length:          27
+    ReplacementText: 'DPCT_CHECK_ERROR(sycl::free(final_walk_lens_d, dpct::get_default_queue())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Offset:          28472
+    Length:          0
+    ReplacementText: ')'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+MainSourceFilesDigest:
+  - MainSourceFile:  '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/helper.cpp'
+    Digest:          e4df9f509b3495b4a21358aad71ac181
+  - MainSourceFile:  '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/kernel.cpp'
+    Digest:          b65f7386d7487bf358bc2e12d12e853d
+  - MainSourceFile:  '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/main.cpp'
+    Digest:          5d45939b3e289c0899e95163acfdffc0
+DpctVersion:     17.0.0
+MainHelperFileName: ''
+USMLevel:        ''
+FeatureMap:      {}
+CompileTargets:  {}
+OptionMap:
+  AnalysisScopePath:
+    Value:           '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src'
+    Specified:       false
+  AsyncHandler:
+    Value:           'false'
+    Specified:       false
+  CommentsEnabled:
+    Value:           'false'
+    Specified:       false
+  CompilationsDir:
+    Value:           '/uufs/chpc.utah.edu/common/home/u1323098/sundar-group-space2/LOC_ALIGN/gpu_local_ht/src'
+    Specified:       true
+  CtadEnabled:
+    Value:           'false'
+    Specified:       false
+  EnablepProfiling:
+    Value:           'false'
+    Specified:       false
+  ExperimentalFlag:
+    Value:           '0'
+    Specified:       false
+  ExplicitClNamespace:
+    Value:           'false'
+    Specified:       false
+  ExplicitNamespace:
+    Value:           '20'
+    Specified:       false
+  ExtensionDDFlag:
+    Value:           '0'
+    Specified:       false
+  ExtensionDEFlag:
+    Value:           '4294967295'
+    Specified:       false
+  NDRangeDim:
+    Value:           '3'
+    Specified:       false
+  NoDRYPattern:
+    Value:           'false'
+    Specified:       false
+  OptimizeMigration:
+    Value:           'false'
+    Specified:       false
+  ProcessAll:
+    Value:           'false'
+    Specified:       false
+  RuleFile:
+    Value:           ''
+    Specified:       false
+  SyclNamedLambda:
+    Value:           'false'
+    Specified:       false
+  UsmLevel:
+    Value:           '1'
+    Specified:       false
+...

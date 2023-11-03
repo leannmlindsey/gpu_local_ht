@@ -1,0 +1,32 @@
+************************************
+Running test for Kmer size: 21
+Running test on /global/homes/l/lindsey/WORK_INTERNSHIP_2023/gpu_local_ht/locassm_data/localassm_extend_7-21.dat
+time for 21 on test number : 256
+Number of differences in 21
+6766
+************************************
+Test for Kmer size: 21 FAILED!
+************************************
+Running test for Kmer size: 33
+Running test on /global/homes/l/lindsey/WORK_INTERNSHIP_2023/gpu_local_ht/locassm_data/localassm_extend_1-33.dat
+time for 33 on test number : 256
+Number of differences in 33
+11159
+************************************
+Test for Kmer size: 33 FAILED!
+************************************
+Running test for Kmer size: 55
+Running test on /global/homes/l/lindsey/WORK_INTERNSHIP_2023/gpu_local_ht/locassm_data/localassm_extend_7-55.dat
+time for 55 on test number : 256
+Number of differences in 55
+14478
+************************************
+Test for Kmer size: 55 FAILED!
+************************************
+Running test for Kmer size: 77
+Running test on /global/homes/l/lindsey/WORK_INTERNSHIP_2023/gpu_local_ht/locassm_data/localassm_extend_9-77.dat
+time for 77 on test number : 256
+Number of differences in 77
+17022
+************************************
+Test for Kmer size: 77 FAILED!

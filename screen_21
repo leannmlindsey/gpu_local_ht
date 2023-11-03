@@ -1,0 +1,156 @@
+inside max:
+42
+zeroes, count:
+24252
+zeroes file write time:
+3.28561
+mids calling
+mids count:
+6518
+new HT size:
+306496512
+Total GPU mem required (GBs):
+0.408737
+GPU: 0 has free memory (Mbytes):=39920.6, out of total (Mbytes):=40338.1
+GPU: 1 has free memory (Mbytes):=39920.6, out of total (Mbytes):=40338.1
+GPU: 2 has free memory (Mbytes):=39920.6, out of total (Mbytes):=40338.1
+GPU: 3 has free memory (Mbytes):=39920.6, out of total (Mbytes):=40338.1
+GPU Mem using (MB):
+34489
+Iterations:
+1
+test_sum:
+306496512
+slice size regular:
+6518
+slice size maximum:
+6518
+max ctg size:
+4503
+slice size:
+6518
+product:
+29350554
+cpu_mem:
+101159360
+Device Mem requesting per slice (MB):
+410.015
+**old lochash size:
+946100736
+new local hash:
+306496512
+**boolhash size:
+95892816
+**max_read_count:
+9
+max read l count:
+9
+max read r count:
+9
+size of loc_host:
+56
+Done(%):
+0
+current_slice vec_size:
+6518
+current_slice slice_size:
+6518
+Starting Data Packing
+Host to Device Transfer...
+Calling Kernel with blocks:
+6519
+Threads:
+32
+revcomp-ing the contigs for next kernel
+Device to Host Transfer...
+Copying back left walks
+Total Loop Time:
+0.0476012
+Total Data Move Time:
+0.00481733
+Total Packing Time:
+0.010241
+gpu_aloc_time:
+0.00124072
+gpu_dealoc_time:
+0.00116673
+cpu_aloc_time:
+6.2511e-05
+cpu_dealoc_time:
+4e-08
+outliers calling
+outliers count:
+248
+new HT size:
+46996992
+Total GPU mem required (GBs):
+0.0511912
+GPU: 0 has free memory (Mbytes):=39920.6, out of total (Mbytes):=40338.1
+GPU: 1 has free memory (Mbytes):=39920.6, out of total (Mbytes):=40338.1
+GPU: 2 has free memory (Mbytes):=39920.6, out of total (Mbytes):=40338.1
+GPU: 3 has free memory (Mbytes):=39916.6, out of total (Mbytes):=40338.1
+GPU Mem using (MB):
+34489
+Iterations:
+1
+test_sum:
+46996992
+slice size regular:
+248
+slice size maximum:
+248
+max ctg size:
+2409
+slice size:
+248
+product:
+597432
+cpu_mem:
+7300128
+Device Mem requesting per slice (MB):
+51.1847
+**old lochash size:
+167989248
+new local hash:
+46996992
+**boolhash size:
+3648576
+**max_read_count:
+42
+max read l count:
+38
+max read r count:
+42
+size of loc_host:
+56
+Done(%):
+0
+current_slice vec_size:
+248
+current_slice slice_size:
+248
+Starting Data Packing
+Host to Device Transfer...
+Calling Kernel with blocks:
+249
+Threads:
+32
+revcomp-ing the contigs for next kernel
+Device to Host Transfer...
+Copying back left walks
+Total Loop Time:
+0.00687588
+Total Data Move Time:
+0.000521977
+Total Packing Time:
+0.00108457
+gpu_aloc_time:
+0.000633293
+gpu_dealoc_time:
+0.0023566
+cpu_aloc_time:
+1.2614e-05
+cpu_dealoc_time:
+4e-08
+Total Time including file write:
+6.08518
