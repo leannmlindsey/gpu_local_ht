@@ -1,0 +1,94 @@
+---
+MainSourceFile:  '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/dpct_output/helper.hpp'
+Replacements:
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/helper.hpp'
+    Offset:          1
+    Length:          0
+    ReplacementText: "#include <sycl/sycl.hpp>\n#include <dpct/dpct.hpp>\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/helper.hpp'
+    Offset:          415
+    Length:          11
+    ReplacementText: 'dpct::err0'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/helper.hpp'
+    Offset:          486
+    Length:          165
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+MainSourceFilesDigest:
+  - MainSourceFile:  '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src/helper.hpp'
+    Digest:          291141b22338cc6e868764a7b3035e35
+DpctVersion:     17.0.0
+MainHelperFileName: ''
+USMLevel:        ''
+FeatureMap:      {}
+CompileTargets:  {}
+OptionMap:
+  AnalysisScopePath:
+    Value:           '/uufs/chpc.utah.edu/common/home/sundar-group2/LOC_ALIGN/gpu_local_ht/src'
+    Specified:       false
+  AsyncHandler:
+    Value:           'false'
+    Specified:       false
+  CommentsEnabled:
+    Value:           'false'
+    Specified:       false
+  CompilationsDir:
+    Value:           '/uufs/chpc.utah.edu/common/home/u1323098/sundar-group-space2/LOC_ALIGN/gpu_local_ht/src'
+    Specified:       true
+  CtadEnabled:
+    Value:           'false'
+    Specified:       false
+  EnablepProfiling:
+    Value:           'false'
+    Specified:       false
+  ExperimentalFlag:
+    Value:           '0'
+    Specified:       false
+  ExplicitClNamespace:
+    Value:           'false'
+    Specified:       false
+  ExplicitNamespace:
+    Value:           '20'
+    Specified:       false
+  ExtensionDDFlag:
+    Value:           '0'
+    Specified:       false
+  ExtensionDEFlag:
+    Value:           '4294967295'
+    Specified:       false
+  NDRangeDim:
+    Value:           '3'
+    Specified:       false
+  NoDRYPattern:
+    Value:           'false'
+    Specified:       false
+  OptimizeMigration:
+    Value:           'false'
+    Specified:       false
+  ProcessAll:
+    Value:           'false'
+    Specified:       false
+  RuleFile:
+    Value:           ''
+    Specified:       false
+  SyclNamedLambda:
+    Value:           'false'
+    Specified:       false
+  UsmLevel:
+    Value:           '1'
+    Specified:       false
+...
