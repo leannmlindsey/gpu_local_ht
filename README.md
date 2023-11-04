@@ -1,9 +1,23 @@
 ## To Compile on INTEL DEVCLOUD
+git clone https://github.com/leannmlindsey/gpu_local_ht.git
+
+cd gpu_local_ht
+
 qsub -I -l nodes=1:gen9:gpu:ppn=2 -d .
 
 icpx -fsycl -I . *.cpp
 
 ## To Compile on Perlmutter
+git clone https://github.com/leannmlindsey/gpu_local_ht.git
+
+cd gpu_local_ht
+
+#switch to perlmutter branch
+
+git fetch
+
+git checkout perlmutter
+
 module load intel-llvm/2023-WW13
 
 source /pscratch/sd/m/mgawan/syclomatic/install_setup.sh
