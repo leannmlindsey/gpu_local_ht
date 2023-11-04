@@ -3,7 +3,7 @@ inside max:
 zeroes, count:
 24252
 zeroes file write time:
-3.28561
+2.04096
 mids calling
 mids count:
 6518
@@ -65,17 +65,17 @@ revcomp-ing the contigs for next kernel
 Device to Host Transfer...
 Copying back left walks
 Total Loop Time:
-0.0476012
+0.0471608
 Total Data Move Time:
-0.00481733
+0.00440976
 Total Packing Time:
-0.010241
+0.0101827
 gpu_aloc_time:
-0.00124072
+0.00126364
 gpu_dealoc_time:
-0.00116673
+0.00115008
 cpu_aloc_time:
-6.2511e-05
+5.9245e-05
 cpu_dealoc_time:
 4e-08
 outliers calling
@@ -139,18 +139,18 @@ revcomp-ing the contigs for next kernel
 Device to Host Transfer...
 Copying back left walks
 Total Loop Time:
-0.00687588
+0.00664087
 Total Data Move Time:
-0.000521977
+0.000525205
 Total Packing Time:
-0.00108457
+0.00108107
 gpu_aloc_time:
-0.000633293
+0.000624508
 gpu_dealoc_time:
-0.0023566
+0.000376188
 cpu_aloc_time:
-1.2614e-05
+1.2074e-05
 cpu_dealoc_time:
-4e-08
+3e-08
 Total Time including file write:
-6.08518
+4.77676

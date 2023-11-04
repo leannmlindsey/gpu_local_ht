@@ -1,16 +1,16 @@
 inside max:
-20
+28
 zeroes, count:
-752
+2110
 zeroes file write time:
-0.0954177
+0.175037
 mids calling
 mids count:
-2543
+3309
 new HT size:
-92945664
+143490816
 Total GPU mem required (GBs):
-0.131599
+0.194392
 GPU: 0 has free memory (Mbytes):=39920.6, out of total (Mbytes):=40338.1
 GPU: 1 has free memory (Mbytes):=39920.6, out of total (Mbytes):=40338.1
 GPU: 2 has free memory (Mbytes):=39920.6, out of total (Mbytes):=40338.1
@@ -20,31 +20,31 @@ GPU Mem using (MB):
 Iterations:
 1
 test_sum:
-92945664
+143490816
 slice size regular:
-2543
+3309
 slice size maximum:
-2543
+3309
 max ctg size:
-6089
+5465
 slice size:
-2543
+3309
 product:
-15484327
+18083685
 cpu_mem:
-46791200
+57722196
 Device Mem requesting per slice (MB):
-132.614
+195.492
 **old lochash size:
-369121536
+480307968
 new local hash:
-92945664
+143490816
 **boolhash size:
-37412616
+48682008
 **max_read_count:
 9
 max read l count:
-8
+9
 max read r count:
 9
 size of loc_host:
@@ -52,39 +52,39 @@ size of loc_host:
 Done(%):
 0
 current_slice vec_size:
-2543
+3309
 current_slice slice_size:
-2543
+3309
 Starting Data Packing
 Host to Device Transfer...
 Calling Kernel with blocks:
-2544
+3310
 Threads:
 32
 revcomp-ing the contigs for next kernel
 Device to Host Transfer...
 Copying back left walks
 Total Loop Time:
-0.031767
+0.0380797
 Total Data Move Time:
-0.00252348
+0.00300014
 Total Packing Time:
-0.00390344
+0.00540537
 gpu_aloc_time:
-0.000894128
+0.0108232
 gpu_dealoc_time:
-0.00075037
+0.000923586
 cpu_aloc_time:
-5.643e-05
+5.8924e-05
 cpu_dealoc_time:
-4e-08
+2.9e-08
 outliers calling
 outliers count:
-1
+10
 new HT size:
-322560
+2161152
 Total GPU mem required (GBs):
-0.000342511
+0.00231031
 GPU: 0 has free memory (Mbytes):=39920.6, out of total (Mbytes):=40338.1
 GPU: 1 has free memory (Mbytes):=39920.6, out of total (Mbytes):=40338.1
 GPU: 2 has free memory (Mbytes):=39920.6, out of total (Mbytes):=40338.1
@@ -94,63 +94,63 @@ GPU Mem using (MB):
 Iterations:
 1
 test_sum:
-322560
+2161152
 slice size regular:
-1
+10
 slice size maximum:
-1
+10
 max ctg size:
-449
+1240
 slice size:
-1
+10
 product:
-449
+12400
 cpu_mem:
-11792
+209660
 Device Mem requesting per slice (MB):
-0.341656
+2.31685
 **old lochash size:
-322560
+4999680
 new local hash:
-322560
+2161152
 **boolhash size:
-14712
+147120
 **max_read_count:
-20
+31
 max read l count:
-13
+31
 max read r count:
-20
+28
 size of loc_host:
 56
 Done(%):
 0
 current_slice vec_size:
-1
+10
 current_slice slice_size:
-1
+10
 Starting Data Packing
 Host to Device Transfer...
 Calling Kernel with blocks:
-2
+11
 Threads:
 32
 revcomp-ing the contigs for next kernel
 Device to Host Transfer...
 Copying back left walks
 Total Loop Time:
-0.007246
+0.00661986
 Total Data Move Time:
-0.000351489
+0.000353813
 Total Packing Time:
-1.4448e-05
+4.9877e-05
 gpu_aloc_time:
-7.8311e-05
+0.000311823
 gpu_dealoc_time:
-9.4973e-05
+0.000189997
 cpu_aloc_time:
-6.693e-06
+6.954e-06
 cpu_dealoc_time:
-3.1e-08
+4e-08
 Total Time including file write:
-1.89408
+1.98326
