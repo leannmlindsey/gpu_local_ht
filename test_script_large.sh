@@ -1,12 +1,12 @@
 #!/bin/bash
 
-rm sorted*
-
 file_21="localassm_extend_7-21.large.dat"
 file_33="localassm_extend_1-33.large.dat"
 file_55="localassm_extend_7-55.large.dat"
 file_77="localassm_extend_9-77.large.dat"
-data_dir="/home/u197359/dpct_output_JUNE/locassm_data"
+data_dir="./locassm_data"
+output_dir="./temporary_output_files"
+mkdir $output_dir
 kmer_sizes=(21 33 55 77)
 i=0
 test_number=$1
@@ -16,7 +16,7 @@ do
 	echo "************************************"
 	echo "Running test for Kmer size: $kmer_size"
 	echo "Running test on $data_dir/$curr_file"
-	./a.out $data_dir/$curr_file $kmer_size out_file_$kmer_size.dat > screen_$kmer_size
+	./ht_loc $data_dir/$curr_file $kmer_size out_file_$kmer_size.dat > screen_$kmer_size
 	#echo "./a.out $data_dir/$curr_file $kmer_size out_file_$kmer_size.dat > screen_$kmer_size"
 	benchmark_time=$(tail -n 1 screen_$kmer_size)
         echo "time for $kmer_size on test number $test_number: $benchmark_time" 
@@ -39,3 +39,7 @@ do
 	((i=i+1))
 	kmer_size=${kmer_sizes[$i]}
 done
+
+mv screen* $output_dir
+mv sorted* $output_dir
+mv out_file* $output_dir

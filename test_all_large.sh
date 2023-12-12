@@ -8,7 +8,7 @@ do
     
     echo "Running test $i"
     # Run the script and save the output to the corresponding file
-    ./test_script.sh > "$OUTPUT_FILE"
+    ./test_script_large.sh > "$OUTPUT_FILE"
     echo "Test $i complete, results stored in $OUTPUT_FILE"
 done
 
@@ -20,3 +20,4 @@ cat results* | grep 'time for 55' | awk '{sum+=$NF} END {print sum/NR}'
 cat results* | grep 'time for 77' | awk '{sum+=$NF} END {print sum/NR}'
 
 mv results* temporary_output_files
+
