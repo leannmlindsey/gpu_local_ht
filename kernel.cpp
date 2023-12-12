@@ -293,18 +293,18 @@ bool ballot(const sycl::sub_group& sg, int predicate){
 	    return 0;
 }
 
-
+/*
 loc_ht& ht_get_atomic(loc_ht* thread_ht, cstr_type kmer_key, uint32_t max_size,
-     const sycl::nd_item<3> &item_ct1,
-     const sycl::stream &stream_ct1){
-     sycl::sub_group sg = item_ct1.get_sub_group();
+    const sycl::nd_item<3> &item_ct1,
+    const sycl::stream &stream_ct1){
+    sycl::sub_group sg = item_ct1.get_sub_group();
     unsigned hash_val = MurmurHashAligned2(kmer_key, max_size);
     unsigned orig_hash = hash_val;
-    return thread_ht[hash_val];
+
     while(true){
         int prev = dpct::atomic_compare_exchange_strong<sycl::access::address_space::generic_space>(&thread_ht[hash_val].key.length, EMPTY, kmer_key.length);
                 
-    	if(prev == EMPTY){
+	if(prev == EMPTY){
              thread_ht[hash_val].key.start_ptr = kmer_key.start_ptr;
              thread_ht[hash_val].val = {.hi_q_exts = {0}, .low_q_exts = {0}, .ext = 0, .count = 0};
         }
@@ -325,9 +325,44 @@ loc_ht& ht_get_atomic(loc_ht* thread_ht, cstr_type kmer_key, uint32_t max_size,
         }
     }
 }
+*/
+
+loc_ht& ht_get_atomic(loc_ht* thread_ht, cstr_type kmer_key, uint32_t max_size,
+    const sycl::nd_item<3> &item_ct1,
+    const sycl::stream &stream_ct1){
+    sycl::sub_group sg = item_ct1.get_sub_group();
+    unsigned hash_val = MurmurHashAligned2(kmer_key, max_size);
+    unsigned orig_hash = hash_val;
+
+    while(true){
+        int prev = dpct::atomic_compare_exchange_strong<sycl::access::address_space::generic_space>(&thread_ht[hash_val].key.length, EMPTY, kmer_key.length);
+        //int mask = dpct::__match_any_sync(__activemask(), (unsigned long long)&thread_ht[hash_val]); // all the threads in the warp which have same address
+        
+	if(prev == EMPTY){
+             thread_ht[hash_val].key.start_ptr = kmer_key.start_ptr;
+             thread_ht[hash_val].val = {.hi_q_exts = {0}, .low_q_exts = {0}, .ext = 0, .count = 0};
+        }
+        sg.barrier();
+	//__syncwarp(mask);
+
+        if(prev != EMPTY && thread_ht[hash_val].key == kmer_key){
+            return thread_ht[hash_val];
+        } else if (prev == EMPTY) {
+            return thread_ht[hash_val];
+        }
+
+        hash_val = (hash_val + 1) % max_size;
+        if(hash_val == orig_hash){ // loop till you reach the same starting positions and then return error
+            stream_ct1 << "*****end reached, hashtable full*****\n"; // for debugging
+            stream_ct1 << "*****end reached, hashtable full*****\n";
+            stream_ct1 << "*****end reached, hashtable full*****\n";
+        }
+    }
+}
+
 
 /* HIP converted to SYCL working version but error in output 3,4,4,6
-loc_ht& ht_get_atomic(loc_ht* thread_ht, cstr_type kmer_key, uint32_t max_size,
+ * loc_ht& ht_get_atomic(loc_ht* thread_ht, cstr_type kmer_key, uint32_t max_size,
     const sycl::nd_item<3> &item_ct1,
     const sycl::stream &stream_ct1){
     sycl::sub_group sg = item_ct1.get_sub_group();
@@ -371,6 +406,7 @@ loc_ht& ht_get_atomic(loc_ht* thread_ht, cstr_type kmer_key, uint32_t max_size,
 	}
     }
 }
+
 */
 	
      

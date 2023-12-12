@@ -493,7 +493,7 @@ void call_kernel(std::vector<CtgWithReads>& data_in, uint32_t max_ctg_size, uint
             //call kernel here, one thread per contig
         unsigned total_threads = vec_size*32;// we need one warp (32 threads) per extension, vec_size = extensions
         //unsigned thread_per_blk = 512;
-	unsigned thread_per_blk = 32; //TODO max_work_group_size
+	unsigned thread_per_blk = 256; //TODO max_work_group_size
         unsigned blocks = (total_threads + thread_per_blk)/thread_per_blk;
         
 
