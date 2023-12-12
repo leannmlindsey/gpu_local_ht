@@ -32,5 +32,7 @@ clang++ -std=c++17 -fsycl -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backe
 
 ## To Run
 cd gpu_local_ht.git
+
 ./test_script.sh #Run one test on four datasets
+
 ./test_all.sh #Runs test_script.sh ten times and takes the average
