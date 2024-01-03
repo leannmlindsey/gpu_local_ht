@@ -10,7 +10,7 @@ kmer_sizes=(21 33 55 77)
 i=0
 test_number=$1
 kmer_size=${kmer_sizes[$i]}
-mkdir $output_dir
+mkdir -p $output_dir
 for curr_file in $file_21 $file_33 $file_55 $file_77
 do 
 	echo "************************************"

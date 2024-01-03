@@ -282,18 +282,6 @@ loc_ht_bool& ht_get(loc_ht_bool* thread_ht, cstr_type kmer_key, uint32_t max_siz
 
 }
 
-bool ballot(const sycl::sub_group& sg, int predicate){
-    bool done;
-    size_t id = sg.get_local_linear_id();
-    uint32_t local_val = (predicate ? 1u : 0u) << id;
-    uint32_t total_val = sycl::reduce_over_group(sg, local_val, sycl::plus<>());
-    if (total_val == sg.get_local_range().size())
-	    return 1;
-    else
-	    return 0;
-}
-
-/*
 loc_ht& ht_get_atomic(loc_ht* thread_ht, cstr_type kmer_key, uint32_t max_size,
     const sycl::nd_item<3> &item_ct1,
     const sycl::stream &stream_ct1){
@@ -303,47 +291,12 @@ loc_ht& ht_get_atomic(loc_ht* thread_ht, cstr_type kmer_key, uint32_t max_size,
 
     while(true){
         int prev = dpct::atomic_compare_exchange_strong<sycl::access::address_space::generic_space>(&thread_ht[hash_val].key.length, EMPTY, kmer_key.length);
-                
-	if(prev == EMPTY){
-             thread_ht[hash_val].key.start_ptr = kmer_key.start_ptr;
-             thread_ht[hash_val].val = {.hi_q_exts = {0}, .low_q_exts = {0}, .ext = 0, .count = 0};
-        }
-        sg.barrier();
-
-        
-        if(prev != EMPTY && thread_ht[hash_val].key == kmer_key){
-            return thread_ht[hash_val];
-        } else if (prev == EMPTY) {
-            return thread_ht[hash_val];
-        }
-        
-        hash_val = (hash_val + 1) % max_size;
-        if(hash_val == orig_hash){ // loop till you reach the same starting positions and then return error
-            stream_ct1 << "*****end reached, hashtable full*****\n"; // for debugging
-            stream_ct1 << "*****end reached, hashtable full*****\n";
-            stream_ct1 << "*****end reached, hashtable full*****\n";
-        }
-    }
-}
-*/
-
-loc_ht& ht_get_atomic(loc_ht* thread_ht, cstr_type kmer_key, uint32_t max_size,
-    const sycl::nd_item<3> &item_ct1,
-    const sycl::stream &stream_ct1){
-    sycl::sub_group sg = item_ct1.get_sub_group();
-    unsigned hash_val = MurmurHashAligned2(kmer_key, max_size);
-    unsigned orig_hash = hash_val;
-
-    while(true){
-        int prev = dpct::atomic_compare_exchange_strong<sycl::access::address_space::generic_space>(&thread_ht[hash_val].key.length, EMPTY, kmer_key.length);
-        //int mask = dpct::__match_any_sync(__activemask(), (unsigned long long)&thread_ht[hash_val]); // all the threads in the warp which have same address
         
 	if(prev == EMPTY){
              thread_ht[hash_val].key.start_ptr = kmer_key.start_ptr;
              thread_ht[hash_val].val = {.hi_q_exts = {0}, .low_q_exts = {0}, .ext = 0, .count = 0};
         }
         sg.barrier();
-	//__syncwarp(mask);
 
         if(prev != EMPTY && thread_ht[hash_val].key == kmer_key){
             return thread_ht[hash_val];
@@ -361,167 +314,6 @@ loc_ht& ht_get_atomic(loc_ht* thread_ht, cstr_type kmer_key, uint32_t max_size,
 }
 
 
-/* HIP converted to SYCL working version but error in output 3,4,4,6
- * loc_ht& ht_get_atomic(loc_ht* thread_ht, cstr_type kmer_key, uint32_t max_size,
-    const sycl::nd_item<3> &item_ct1,
-    const sycl::stream &stream_ct1){
-    sycl::sub_group sg = item_ct1.get_sub_group();
-    unsigned hash_val = MurmurHashAligned2(kmer_key, max_size);
-    unsigned orig_hash = hash_val;
-    int done = 0;
-    int prev;
-
-    while(true){
-	if(sycl::all_of_group(sg, done==1)){
-	    return thread_ht[hash_val];
-	}
-	if(!done) {
-		prev = dpct::atomic_compare_exchange_strong<sycl::access::address_space::generic_space>(&thread_ht[hash_val].key.length, EMPTY, kmer_key.length);
-		if(prev == EMPTY){
-			thread_ht[hash_val].key.start_ptr = kmer_key.start_ptr;
-			thread_ht[hash_val].val = {.hi_q_exts = {0}, .low_q_exts = {0}, .ext = 0, .count = 0};
-		}
-	}
-
-	if(!done) {
-		if(prev != EMPTY && thread_ht[hash_val].key == kmer_key){
-			done = 1;
-			//return thread_ht[hash_val];
-		} else if (prev == EMPTY) {
-			//return thread_ht[hash_val];
-			done = 1;
-		}
-	}
-	if(sycl::all_of_group(sg, done==1)){
-		return thread_ht[hash_val];
-	}
-	if(!done) {
-		hash_val = (hash_val + 1) % max_size;
-		if(hash_val == orig_hash){ // loop till you reach the same starting positions and then return error
-            		stream_ct1 << "*****end reached, hashtable full*****\n"; // for debugging
-            		stream_ct1 << "*****end reached, hashtable full*****\n";
-            		stream_ct1 << "*****end reached, hashtable full*****\n";
-			done = 1;
-        	}
-	}
-    }
-}
-
-*/
-	
-     
-
-
-
-/* CUDA WORKING VERSION 
-    //stream_ct1 << "made it to ht_get_atomic, print test successful\n" << sycl::endl;
-    unsigned hash_val = MurmurHashAligned2(kmer_key, max_size);
-    unsigned orig_hash = hash_val;
-
-    while(true){
-        int prev = dpct::atomic_compare_exchange_strong<
-            sycl::access::address_space::generic_space>(
-            &thread_ht[hash_val].key.length, EMPTY, kmer_key.length);
-  */
-	/*
-DPCT1086:7: __activemask() is migrated to 0xffffffff. You may need to adjust the
-code.
-*/
-        /*
-DPCT1007:13: Migration of __match_any_sync is not supported.
-*/
-        /*int mask = __match_any_sync(
-            0xffffffff,
-            (unsigned long long)&thread_ht[hash_val]); // all the threads in the
-                                                       // warp which have same
-                                                       // address
-	*/
-/*
-        if(prev == EMPTY){
-            thread_ht[hash_val].key.start_ptr = kmer_key.start_ptr;
-            thread_ht[hash_val].val = {.hi_q_exts = {0}, .low_q_exts = {0}, .ext = 0, .count = 0};
-        }
-        sycl::group_barrier(item_ct1.get_sub_group());
-        if(prev != EMPTY && thread_ht[hash_val].key == kmer_key){
-            //printf("key found, returning\n");// keep this for debugging
-            return thread_ht[hash_val];
-        }else if (prev == EMPTY){
-            return thread_ht[hash_val];
-        }
-        hash_val = (hash_val +1 ) %max_size;//hash_val = (hash_val + 1) & (HT_SIZE -1);
-        if(hash_val == orig_hash){ // loop till you reach the same starting positions and then return error
-            stream_ct1 << "*****end reached, hashtable full*****\n"; // for debugging
-            stream_ct1 << "*****end reached, hashtable full*****\n";
-            stream_ct1 << "*****end reached, hashtable full*****\n";
-        }
-    }
-*/
-    /* HIP WORKING VERSION 
-    unsigned hash_val = MurmurHashAligned2(kmer_key, max_size);
-    unsigned orig_hash = hash_val;
-    int done = 1; //when local var done is set to 0 the thread has completed its ht insert
-    int prev;
-   
-    const sycl::sub_group &sg = item_ct1.get_sub_group();
-    int thread_Id = sg.get_local_linear_id();
-    //stream_ct1 << "made it to ht_get_atomic, thread_Id " << thread_Id << "\n" << sycl::endl;
-     stream_ct1 << "BEFOR ALL SET TO 1: Ballot is " << ballot(sg, done) << "tid = " << thread_Id << "local val done = " << done << sycl::endl;
-    if (thread_Id == 2) done = 0;
-    if (thread_Id == 4) done = 0;
-    stream_ct1 << "AFTER 2 set to 1: Ballot is " << ballot(sg, done) << "tid = " << thread_Id << "local val done = " << done << sycl::endl;
-    done = 0;
-    stream_ct1 << "AFTER ALL SET TO 0: Ballot is " << ballot(sg, done) << "tid = " << thread_Id << "local val done = " << done << sycl::endl;
-
-    */
-   /* while(true){
-    
-        stream_ct1 << "Ballot is " << ballot(sg, done) << "tid = " << thread_Id << "local val done = " << done << sycl::endl;
-        if(ballot(sg,done) == 0)
-            return thread_ht[hash_val];
-
-        if(ballot(sg,done) != 0) {
-
-	    int prev = dpct::atomic_compare_exchange_strong<
-            sycl::access::address_space::generic_space>(
-            &thread_ht[hash_val].key.length, EMPTY, kmer_key.length);
-
-            // This function doesn't exist in HIP
-            //int mask = __match_any_sync(__activemask(), (unsigned long long)&thread_ht[hash_val]); // all the threads in the warp which have same address
-
-            if(prev == EMPTY){
-                thread_ht[hash_val].key.start_ptr = kmer_key.start_ptr;
-                thread_ht[hash_val].val = {.hi_q_exts = {0}, .low_q_exts = {0}, .ext = 0, .count = 0};
-            }
-        }
-
-        // This function doesn't exist in HIP
-        //__syncwarp(mask);
-
-        if(ballot(sg, done)) {
-            if(prev != EMPTY && thread_ht[hash_val].key == kmer_key){
-                //printf("key found, returning\n");// keep this for debugging
-                done = 0;
-                //return thread_ht[hash_val];
-            }else if (prev == EMPTY){
-                done = 0;
-                //return thread_ht[hash_val];
-            }
-        }
-        if(ballot(sg,done) == 0)
-            return thread_ht[hash_val];
-        if(ballot(sg,done != 0)) {
-            hash_val = (hash_val + 1) % max_size;//hash_val = (hash_val + 1) & (HT_SIZE -1);
-            if(hash_val == orig_hash){ // loop till you reach the same starting positions and then return error
-                stream_ct1 << "*****end reached, hashtable full*****\n"; // for debugging
-            	stream_ct1 << "*****end reached, hashtable full*****\n";
-            	stream_ct1 << "*****end reached, hashtable full*****\n";
-		        done = 0; // We will return the current hash for now (though incorrect)
-            }
-        }
-    }
-    */
-    //return thread_ht[hash_val];
-    //
 char walk_mers(loc_ht* thrd_loc_ht, loc_ht_bool* thrd_ht_bool, uint32_t max_ht_size, int& mer_len, cstr_type& mer_walk_temp, cstr_type& longest_walk, cstr_type& walk, const int idx, int max_walk_len,
                const sycl::stream &stream_ct1){
     char walk_result = 'X';

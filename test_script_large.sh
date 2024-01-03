@@ -6,7 +6,7 @@ file_55="localassm_extend_7-55.large.dat"
 file_77="localassm_extend_9-77.large.dat"
 data_dir="./locassm_data"
 output_dir="./temporary_output_files"
-mkdir $output_dir
+mkdir -p $output_dir
 kmer_sizes=(21 33 55 77)
 i=0
 test_number=$1

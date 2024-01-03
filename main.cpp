@@ -28,8 +28,9 @@ DPCT1106:12: 'cudaMemGetInfo' was migrated with the Intel extensions for device
 information which may not be supported by all compilers or runtimes. You may
 need to adjust the code.
 */
-	/* LL: need to change */
-        dpct::get_current_device().get_memory_info(free_mem, total_mem);
+	/* LL: need to ask Muaaz if we need to implement a workaround to account for not being able to get free memory */
+        // Gives this warning: get_memory_info: ext_intel_free_memory is not supported.	
+	dpct::get_current_device().get_memory_info(free_mem, total_mem);
         std::cout << "GPU: " << id << " has free memory (Mbytes):=" << (double)free_mem/(1024*1024) << ", out of total (Mbytes):=" << (double)total_mem/(1024*1024) << std::endl;
     }
     return total_mem*0.95;
