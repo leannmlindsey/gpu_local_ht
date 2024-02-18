@@ -1,43 +1,33 @@
-## To Compile on INTEL DEVCLOUD
+## To Compile on Notchpeak MI100
 git clone https://github.com/leannmlindsey/gpu_local_ht.git
 
 cd gpu_local_ht
 
-qsub -I -l nodes=1:gen9:gpu:ppn=2 -d .
+git checkout hip
 
-icpx -fsycl -I . *.cpp -o ht_loc
+git status // verify you are on the hip branch
+
+
 
 ## To Compile on Perlmutter
 git clone https://github.com/leannmlindsey/gpu_local_ht.git
 
 cd gpu_local_ht
 
-#switch to perlmutter branch
+cd src
 
-git fetch
+mkdir build
 
-git checkout perlmutter
-
-module load intel-llvm/2023-WW13
-
-source /pscratch/sd/m/mgawan/syclomatic/install_setup.sh
-
-source /pscratch/sd/m/mgawan/syclomatic/env.sh
-
-c2s --version
-
-which nvcc
-
-clang++ -std=c++17 -fsycl -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend '--cuda-gpu-arch=sm_80' *.cp
+./test_script.sh
 
 ## GUNZIP the larger files
 cd gpu_local_ht/locassm_data
 gunzip *.gz
 
 ## To Run
-cd gpu_local_ht
+cd gpu_local_ht/src
 
-./test_script.sh #Run one test on four datasets
+./test_script.sh #Run one test on four datasets, this run compiles the code and reports if the tests pass or fail
 
 ./test_all.sh #Runs test_script.sh ten times and takes the average
 

@@ -19,4 +19,7 @@ cat results* | grep 'time for 33' | awk '{sum+=$NF} END {print sum/NR}'
 cat results* | grep 'time for 55' | awk '{sum+=$NF} END {print sum/NR}'
 cat results* | grep 'time for 77' | awk '{sum+=$NF} END {print sum/NR}'
 
+mkdir temporary_output_files
 mv results* temporary_output_files
+mv sorted* temporary_output_files
+mv screen* temporary_output_files
