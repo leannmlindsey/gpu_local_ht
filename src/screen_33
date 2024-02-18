@@ -1,0 +1,199 @@
+[main.cpp: 44] This is a test
+inside max:
+24
+zeroes, count:
+39805
+zeroes file write time:
+0.0247899
+mids calling
+mids count:
+21660
+new HT size:
+1039207680
+Total GPU mem required (GBs):
+1.37404
+GPU: 0 has free memory (Mbytes):=32712, out of total (Mbytes):=32752
+GPU Mem using (MB):
+29440.8
+Iterations:
+1
+test_sum:
+1039207680
+slice size regular:
+21660
+slice size maximum:
+21660
+max ctg size:
+5663
+slice size:
+21660
+product:
+122660580
+cpu_mem:
+386414400
+Device Mem requesting per slice (MB):
+1380.4
+**old lochash size:
+3143992320
+new local hash:
+1039207680
+**boolhash size:
+318661920
+**max_read_count:
+9
+max read l count:
+9
+max read r count:
+9
+size of loc_host:
+56
+Done(%):
+0
+current_slice vec_size:
+21660
+current_slice slice_size:
+21660
+Starting Data Packing
+Host to Device Transfer...
+Calling Kernel with blocks:
+2708
+Threads:
+512
+Timing Iterative Walks Kernel...
+
+
+##########
+Kernel Time:
+195.278
+ ms
+##########
+
+
+
+revcomp-ing the contigs for next kernel
+Timing Iterative Walks Kernel...
+
+
+##########
+Kernel Time: 
+195.278
+ ms
+##########
+
+
+
+Device to Host Transfer...
+Copying back left walks
+Total Loop Time:
+0.365096
+Total Data Move Time:
+0.270316
+Total Packing Time:
+0.0213605
+[main.cpp: 474] Starting CPU loop
+Outer loop: 0 of 1
+gpu_aloc_time:
+0.00024761
+gpu_dealoc_time:
+0.000484551
+cpu_aloc_time:
+3.871e-05
+cpu_dealoc_time:
+2e-08
+outliers calling
+outliers count:
+305
+new HT size:
+58867200
+Total GPU mem required (GBs):
+0.0637424
+GPU: 0 has free memory (Mbytes):=32542, out of total (Mbytes):=32752
+GPU Mem using (MB):
+29287.8
+Iterations:
+1
+test_sum:
+58867200
+slice size regular:
+305
+slice size maximum:
+305
+max ctg size:
+2158
+slice size:
+305
+product:
+658190
+cpu_mem:
+6420250
+Device Mem requesting per slice (MB):
+63.8399
+**old lochash size:
+142652160
+new local hash:
+58867200
+**boolhash size:
+4487160
+**max_read_count:
+29
+max read l count:
+29
+max read r count:
+24
+size of loc_host:
+56
+Done(%):
+0
+current_slice vec_size:
+305
+current_slice slice_size:
+305
+Starting Data Packing
+Host to Device Transfer...
+Calling Kernel with blocks:
+39
+Threads:
+512
+Timing Iterative Walks Kernel...
+
+
+##########
+Kernel Time:
+195.278
+ ms
+##########
+
+
+
+revcomp-ing the contigs for next kernel
+Timing Iterative Walks Kernel...
+
+
+##########
+Kernel Time: 
+195.278
+ ms
+##########
+
+
+
+Device to Host Transfer...
+Copying back left walks
+Total Loop Time:
+0.0208281
+Total Data Move Time:
+0.0102921
+Total Packing Time:
+0.000769002
+[main.cpp: 474] Starting CPU loop
+Outer loop: 0 of 1
+gpu_aloc_time:
+0.000289421
+gpu_dealoc_time:
+0.00010171
+cpu_aloc_time:
+1.045e-05
+cpu_dealoc_time:
+2e-08
+Total Time including file write:
+0.544988
