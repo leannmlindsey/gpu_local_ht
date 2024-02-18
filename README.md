@@ -5,14 +5,18 @@ cd gpu_local_ht
 
 git checkout hip
 
-git status // verify you are on the hip branch
+git status
+
+**verify you are on the hip branch**
 
 
 
 ## To Compile on Notchpeak 366 (AMD MI100)
 salloc --time=1:00:00 --account=eval --partition=notchpeak-eval --gres=gpu
 module load rocm
-rocm-smi // verify that you have an AMD GPU
+rocm-smi 
+
+**verify that you have an AMD GPU**
 
 cd src
 
