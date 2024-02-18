@@ -5,24 +5,22 @@ cd gpu_local_ht
 
 git checkout hip
 
-git status
-
-**verify you are on the hip branch**
+git status # To verify you are on the hip branch
 
 
 
 ## To Compile on Notchpeak 366 (AMD MI100)
 salloc --time=1:00:00 --account=eval --partition=notchpeak-eval --gres=gpu
-module load rocm
-rocm-smi 
 
-**verify that you have an AMD GPU**
+module load rocm
+
+rocm-smi # This verifies that you have an AMD GPU
 
 cd src
 
 mkdir build
 
-./test_script.sh // compiles and runs a test run, reports if tests pass or fail
+./test_script.sh # This compiles and runs a test run, reports if tests pass or fail
 
 ## GUNZIP the larger files
 cd gpu_local_ht/locassm_data
