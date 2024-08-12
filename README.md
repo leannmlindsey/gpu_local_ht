@@ -1,4 +1,4 @@
-# GPU local assembly kernels for MHM2 on Nvidia Hardware
+# GPU local assembly kernel for MHM2 on Nvidia Hardware
 To build and run tests
 
 ```bash
