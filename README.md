@@ -1,3 +1,4 @@
+# GPU local assembly kernel for MHM2 on INTEL Hardware
 ## To Compile on INTEL DEVCLOUD
 git clone https://github.com/leannmlindsey/gpu_local_ht.git
 
