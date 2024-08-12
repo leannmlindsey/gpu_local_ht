@@ -1,3 +1,5 @@
+# GPU local assembly kernels for MHM2 on AMD Hardware
+
 ## To Clone and Checkout Hip Branch
 git clone https://github.com/leannmlindsey/gpu_local_ht.git
 
