@@ -8,11 +8,6 @@ qsub -I -l nodes=1:gen9:gpu:ppn=2 -d .
 
 icpx -fsycl -I . *.cpp -o ht_loc
 
-## To Compile on Perlmutter
-git clone https://github.com/leannmlindsey/gpu_local_ht.git
-
-cd gpu_local_ht
-
 ## GUNZIP the larger files
 cd gpu_local_ht/locassm_data
 gunzip *.gz
