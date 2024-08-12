@@ -13,24 +13,6 @@ git clone https://github.com/leannmlindsey/gpu_local_ht.git
 
 cd gpu_local_ht
 
-#switch to perlmutter branch
-
-git fetch
-
-git checkout perlmutter
-
-module load intel-llvm/2023-WW13
-
-source /pscratch/sd/m/mgawan/syclomatic/install_setup.sh
-
-source /pscratch/sd/m/mgawan/syclomatic/env.sh
-
-c2s --version
-
-which nvcc
-
-clang++ -std=c++17 -fsycl -fsycl-targets=nvptx64-nvidia-cuda -Xsycl-target-backend '--cuda-gpu-arch=sm_80' *.cp
-
 ## GUNZIP the larger files
 cd gpu_local_ht/locassm_data
 gunzip *.gz
